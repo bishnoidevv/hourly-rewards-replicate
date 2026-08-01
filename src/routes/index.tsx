@@ -80,7 +80,7 @@ function Index() {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  const notif = NOTIFICATIONS[notifIndex];
+  const notif = NOTIFICATIONS[notifIndex] ?? NOTIFICATIONS[0]!;
 
   return (
     <div className="fc-root">
