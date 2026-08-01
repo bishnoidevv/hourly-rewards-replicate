@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-import appLogo from "@/assets/app-logo.png.asset.json";
-import gameImg from "@/assets/game-garden.png.asset.json";
+import appLogo from "@/assets/app-logo.png";
+import gameImg from "@/assets/game-garden.png";
 
 const TITLE = "Freecash — Zarabiaj na Graniu";
 const DESC =
@@ -98,7 +98,7 @@ function Index() {
           <div className="hero-logo-wrap">
             <img
               className="hero-logo"
-              src={appLogo.url}
+              src={appLogo}
               alt="Logo Freecash"
               width={92}
               height={92}
@@ -131,7 +131,7 @@ function Index() {
             <div className="game-img-wrap">
               <img
                 className="game-img"
-                src={gameImg.url}
+                src={gameImg}
                 alt="Gra Gardenscapes"
                 loading="lazy"
                 width={76}
