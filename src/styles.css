@@ -145,6 +145,96 @@
 
 /* ---------------- Freecash landing design system ---------------- */
 
+.gate-root {
+  background: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.gate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 380px;
+  width: 100%;
+}
+.gate-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.gate-text {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+  max-width: 300px;
+}
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 20px 0;
+}
+.arrow-container span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-right: 4px solid #00c8ff;
+  border-bottom: 4px solid #00c8ff;
+  transform: rotate(45deg);
+  opacity: 0.3;
+  animation: gate-bounce 1.5s ease-in-out infinite;
+}
+.arrow-container span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.arrow-container span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes gate-bounce {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+.gate-btn {
+  display: inline-block;
+  background: #e8272a;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 15px rgba(232, 39, 42, 0.3);
+}
+.gate-btn:hover {
+  background: #c0181b;
+}
+.gate-btn:active {
+  transform: scale(0.97);
+}
+
 :root {
   --fc-bg: #141414;
   --fc-ink: #f4f4f6;
