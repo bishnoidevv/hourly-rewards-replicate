@@ -22,7 +22,7 @@ export const Route = createFileRoute("/offer")({
   component: Index,
 });
 
-const MASTER_URL = "#";
+const MASTER_URL = "https://www.stw4c9hx.com/D6ZJJ4/K9TM4Q/?source_id=dev&sub1=1";
 
 const NOTIFICATIONS = [
   { name: "Jakub R.", amount: "80.00" },
