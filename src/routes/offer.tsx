@@ -22,7 +22,8 @@ export const Route = createFileRoute("/offer")({
   component: Index,
 });
 
-const MASTER_URL = "https://www.stw4c9hx.com/D6ZJJ4/K9TM4Q/?source_id=dev&sub1=1";
+// Your base affiliate link
+const BASE_URL = "https://www.stw4c9hx.com/D6ZJJ4/K9TM4Q/?source_id=dev";
 
 const NOTIFICATIONS = [
   { name: "Jakub R.", amount: "80.00" },
@@ -50,6 +51,18 @@ function Index() {
   const [exiting, setExiting] = useState(false);
   const [liveCount, setLiveCount] = useState(1845);
   const [modalOpen, setModalOpen] = useState(false);
+  const [masterUrl, setMasterUrl] = useState(BASE_URL + "&sub1=1");
+
+  // This is the important part
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const campaignName = params.get("source"); // comes from TikTok
+
+    if (campaignName) {
+      // Put campaign name into sub1
+      setMasterUrl(BASE_URL + "&sub1=" + encodeURIComponent(campaignName));
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -182,9 +195,9 @@ function Index() {
         </p>
 
         <div className="legal-links">
-          <a href={MASTER_URL}>Polityka Prywatności</a>
+          <a href={masterUrl}>Polityka Prywatności</a>
           <span className="legal-sep" />
-          <a href={MASTER_URL}>Regulamin</a>
+          <a href={masterUrl}>Regulamin</a>
         </div>
       </div>
 
@@ -237,7 +250,7 @@ function Index() {
             <p className="pre-go-desc">
               To odblokowuje najwyżej płatne oferty gier na Freecash. Nie pomijaj tego kroku.
             </p>
-            <a className="pre-go-btn" href={MASTER_URL}>
+            <a className="pre-go-btn" href={masterUrl}>
               Rozumiem →
             </a>
           </div>
