@@ -23,7 +23,7 @@ export const Route = createFileRoute("/offer")({
 });
 
 // Your base affiliate link
-const BASE_URL = "https://www.stw4c9hx.com/D6ZJJ4/K9TM4Q/?source_id=dev";
+const BASE_URL = "https://giftclick.org/aff_c?tl_id=6db1bd1d";
 
 const NOTIFICATIONS = [
   { name: "Jakub R.", amount: "80.00" },
