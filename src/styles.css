@@ -468,9 +468,19 @@
   margin-bottom: 6px;
 }
 .game-pay {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.01em;
   color: var(--fc-green-2);
+  background: rgba(16, 44, 32, 0.85);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35) inset;
 }
 .steps-divider {
   border: none;

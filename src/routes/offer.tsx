@@ -156,7 +156,9 @@ function Index() {
               <div className="game-rating">
                 <span className="stars">★★★★★</span> 4.8 · Najwyżej oceniane
               </div>
-              <div className="game-pay">Stawka: 105 zł/h</div>
+              <div className="game-pay">
+                <span aria-hidden="true">🔥</span> Meilleure offre du jour
+              </div>
             </div>
           </div>
           <hr className="steps-divider" />
