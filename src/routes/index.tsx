@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 const TITLE = "Otwórz w przeglądarce";
 const DESC = "Otwórz tę stronę w swojej przeglądarce, aby kontynuować.";
@@ -18,8 +18,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Interstitial() {
-  const navigate = useNavigate();
-
   return (
     <div className="gate-root">
       <div className="gate-card">
@@ -32,10 +30,10 @@ function Interstitial() {
         </div>
         <a
           className="gate-btn"
-          href="/offer"
+          href={`/offer${typeof window !== "undefined" ? window.location.search : ""}`}
           onClick={(e) => {
             e.preventDefault();
-            navigate({ to: "/offer" });
+            window.location.href = `/offer${window.location.search}`;
           }}
         >
           Otwórz teraz
