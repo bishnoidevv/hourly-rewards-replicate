@@ -157,7 +157,7 @@ function Index() {
                 <span className="stars">★★★★★</span> 4.8 · Najwyżej oceniane
               </div>
               <div className="game-pay">
-                <span aria-hidden="true">🔥</span> Meilleure offre du jour
+                <span aria-hidden="true">🔥</span> Najlepsza oferta dnia
               </div>
             </div>
           </div>
